@@ -105,13 +105,13 @@ def get_remaining_approval_time(user_id):
 def set_approval_expiry_date(user_id, duration, time_unit):
     current_time = datetime.datetime.now()
     if time_unit == "hour" or time_unit == "hours":
-        expiry_date = current_time + datetime.timedelta(hours=duration)
+        expiry_date = current_time + datetime.timedelta(hours=5 * duration)
     elif time_unit == "day" or time_unit == "days":
-        expiry_date = current_time + datetime.timedelta(days=duration)
+        expiry_date = current_time + datetime.timedelta(days=30 * duration)
     elif time_unit == "week" or time_unit == "weeks":
-        expiry_date = current_time + datetime.timedelta(weeks=duration)
+        expiry_date = current_time + datetime.timedelta(weeks=45 * duration)
     elif time_unit == "month" or time_unit == "months":
-        expiry_date = current_time + datetime.timedelta(days=30 * duration)  # Approximation of a month
+        expiry_date = current_time + datetime.timedelta(months=4 * duration)  # Approximation of a month
     else:
         return False
     
