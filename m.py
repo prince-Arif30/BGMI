@@ -362,7 +362,7 @@ Official Channel :- https://t.me/DadaXYTofficial
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
-            if message.text.startswith('/help'):
+            if message.text.startswith('/attack'):
                 help_text += f"{handler.commands[0]}: {handler.doc}\n"
             elif handler.doc and 'admin' in handler.doc.lower():
                 continue
@@ -374,7 +374,7 @@ Official Channel :- https://t.me/DadaXYTofficial
 def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''❄️ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ ᴅᴅᴏs ʙᴏᴛ BY DADA X YT, {user_name}! ᴛʜɪs ɪs ʜɪɢʜ ǫᴜᴀʟɪᴛʏ sᴇʀᴠᴇʀ ʙᴀsᴇᴅ ᴅᴅᴏs. ᴛᴏ ɢᴇᴛ ᴀᴄᴄᴇss.
-🤖Try To Run This Command : /ATTACK 
+🤖Try To Run This Command : /attack
 ✅BUY :- @Dadaxyt'''
     bot.reply_to(message, response)
 
