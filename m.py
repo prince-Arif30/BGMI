@@ -288,7 +288,7 @@ attack_cooldown = {}
 COOLDOWN_TIME =0
 
 # Handler for /attack command
-@bot.message_handler(commands=['/attack'])
+@bot.message_handler(commands=['attack'])
 def handle_attack(message):
     user_id = str(message.chat.id)
     if user_id in allowed_user_ids:
